@@ -15,8 +15,8 @@
             <ul class="nav-links">
                 <li><a href="#about">About</a></li>  
                 <li><a href="#experience">Experience</a></li>  
-                <li><a href="#proects">Projects</a></li>  
-                <li><a href="#contacts">Contacts</a></li>  
+                <li><a href="#projects">Projects</a></li>  
+                <li><a href="#contact">Contacts</a></li>  
             </ul>
         </div>
 
@@ -51,13 +51,13 @@
 
             <div class="btn_container">
                 <button 
-                class="btn btn-color-2" 
+                class="btn-color-2" 
                 onclick="window.open('./assets/Rijan_SWE.pdf')"
                 >Download Resume</button>
 
                 <button 
-                class="btn btn-color-1" 
-                onclick="location.href='#contacts'"
+                class="btn-color-1" 
+                onclick="location.href='./#contact'"
                 >Contact Info</button>
             </div>
             <div id="socials-container">
@@ -76,7 +76,192 @@
 
     </section>
 
+    <section id="about">
+        <p class="section__text__p1">Get to know more</p>
+        <h1 class="title">About Me</h1>
+        <div class="section-container">
+            <div class="section__pic-container">
+                <img src="assets/about-pic.png" 
+                alt="Profile picture" 
+                class="about-pic"/>
+            </div>
+            <div class="about-details-container">
+                <div class="about-containers">
+                    <div class="detailes-container">
+                        <img src="./assets/education.png" 
+                        alt="Education icon" 
+                        class="icon"/>
+                        <h3>Education</h3>
+                        <p>B.A. Computer Science <br> </p>
+                    </div>
+                </div>
+                <div class="text-container">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut assumenda hic deserunt c
+                        ulpa aperiam accusamus aliquid, sint aliquam perspiciatis, iusto, esse eum. D
+                        ucimus, repudiandae amet sapiente nostrum officiis nulla itaque veniam? 
+                        Soluta, a! Reiciendis quis fuga, eaque similique laudantium in assumenda 
+                        nam! Veniam quo ea eveniet eaque, debitis voluptas at?</p>
+                </div>
+            </div>
+        </div>
+        <img src="./assets/arrow.png" 
+        alt="Arrow Icon" 
+        class="icon arrow" 
+        onclick="location.href='./#experience'"/>
+    </section>
 
+    <section id="experience">
+        <p class="section__text__p1"></p>
+        <h1 class="title">Experience</h1>
+        <div class="experience-details-container">
+            <div class="about-containers">
+                <div class="details-containers">
+                    
+                    <div class="article-container">
+                        <article>
+                            <h2 class="experience-sub-title">Cloud Systems Intern</h2>
+                            <ul>  <li>Supported configuring 3 websites on Azure App Services, 
+                                ensuring seamless functionality and integration with other 
+                                systems.</li>
+                                <li>Managed and optimized backend pools for 6 application gateways across production 
+                                    and non-production, reducing downtime by 20% and improving response 
+                                    times by 15%.</li>
+                                <li>Migrated websites from Azure ASE to standalone web apps, 
+                                    cutting costs by 30% and optimizing resources.</li>
+                                <li>Developed 5+ PowerShell scripts to automate asset management, 
+                                    reducing manual effort by 30%, 
+                                    minimizing errors, and improving audit accuracy.</li></ul>
+                          
+                        </article>
+                    </div>
+                </div>
+
+                <div class="details-containers">
+                    
+                    <div class="article-container">
+                        <article>
+                            <h2 class="experience-sub-title">Front End Developer</h2>
+                                <ul>
+                                    <li>Member of Augustana Web Guild, developing websites 
+                                        for nonprofits and small businesses while promoting web design education.</li>
+                                        <li>Built interactive UIs with React.js, including real-time 
+                                            calendars, validated contact forms, and donation portals.
+                                        </li>
+                                        <li>Designed and deployed 3 responsive websites 
+                                            using HTML, CSS, and JavaScript, ensuring cross-browser compatibility.</li>
+                                        <li>Utilized Git for version control to 
+                                            streamline collaboration and enhance development efficiency.</li>
+
+                                </ul>
+                                
+                              
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <img src="./assets/arrow.png" 
+        alt="Arrow Icon" 
+        class="icon arrow" 
+        onclick="location.href='./#projects'"/>
+    </section>
+
+    <section id="projects">
+        <p class="section__text__p1"> Browse My Recent</p>
+        <h1 class="title">Projects</h1>
+        <div class="experience-details-container">
+            <div class="projects-contianers">
+
+          
+            <div class="details-container color-container  details-containers">
+                <div class="article-container">
+                    <img src="./assets/project-1.png"
+                     alt="project-1"
+                     class="project-img">
+
+                </div>
+                <h2 class="experience-sub-title project-title"> Project One</h2>
+
+                <div class="btn-container">
+                    <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/'">GitHub</button>
+                    <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/'">Demo</button>
+                </div>
+            </div>
+            <div class="details-container color-container  details-containers">
+                <div class="article-container">
+                    <img src="./assets/project-2.png"
+                     alt="project-1"
+                     class="project-img">
+
+                </div>
+                <h2 class="experience-sub-title project-title"> Project Two</h2>
+
+                <div class="btn-container">
+                    <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/'">GitHub</button>
+                    <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/'">Demo</button>
+                </div>
+            </div>
+            <div class="details-container color-container  details-containers">
+                <div class="article-container">
+                    <img src="./assets/project-3.png"
+                     alt="project-1"
+                     class="project-img">
+
+                </div>
+                <h2 class="experience-sub-title project-title"> Project Three</h2>
+
+                <div class="btn-container">
+                    <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/'">GitHub</button>
+                    <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/'">Demo</button>
+                </div>
+            </div>
+        </div>
+        </div>
+        <img src="./assets/arrow.png" 
+        alt="Arrow Icon" 
+        class="icon arrow" 
+        onclick="location.href='./#contact'"/>
+    </section>
+
+    <section id="contact">
+        <p class="section__text__p1">Get in Touch</p>
+        <h1 class="title">Contact Me</h1>
+        <div class="contact-info-upper-container">
+            <div class="contact-info-container">
+                <img src="./assets/email.png" 
+                alt="Email Icon"
+                class="icon contact-icon email-icon"/>
+                <p><a href="mailto:rijankafle20@augustana.edu">rijankafle20@augustana.edu</a>
+                </p>
+            </div>
+        
+           
+                <div class="contact-info-container">
+                    <img src="./assets/linkedin.png" 
+                    alt="Email Icon"
+                    class="icon contact-icon"/>
+                    <p><a href="https://www.linkedin.com/in/rijan-kafle/">LinkedIn</a>
+                    </p>
+                </div>
+            
+        </div>
+
+
+    </section>
+    <footer>
+        <nav>
+        <div class="nav-links-container">
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>  
+                <li><a href="#experience">Experience</a></li>  
+                <li><a href="#projects">Projects</a></li>  
+                <li><a href="#contacts">Contacts</a></li>  
+            </ul>
+        </div>
+        </nav>
+        <p>Copyright &#169; 2025 Rijan Kafle. All Rights Reserved</p>
+    </footer>
     <script src="script.js"></script>
     
 </body>
