@@ -297,6 +297,9 @@ section {
   gap: 4rem;
   height: 80%;
 }
+.text-container p {
+  font-size: large;
+}
 
 .section__pic-container {
   width: 400px;
@@ -323,7 +326,7 @@ section {
 }
 
 .experience-details-container li {
-  margin-bottom: 1rem;
+  margin-bottom: auto;
   font-size: 1.2rem;
   color: #333;
 }
@@ -337,7 +340,7 @@ section {
 }
 
 .details-containers {
-  padding: 1rem;
+  padding: 2rem;
   flex: 1;
   background: white;
   border-radius: 2rem;
@@ -390,6 +393,7 @@ article {
 
 #projects {
   position: relative;
+  margin-bottom: auto;
 }
 
 .color-contrainer {
