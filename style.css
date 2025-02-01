@@ -8,7 +8,7 @@ body {
   background-color: white;
   color: #333;
   line-height: 1.6;
-  font-size: 16px;
+  font-size: 15px;
 }
 
 html {
@@ -153,7 +153,7 @@ a:hover {
 section {
   padding-top: 4vh;
   height: 96vh;
-  margin: 0 10rem;
+  margin: 0 8rem;
   box-sizing: border-box;
   min-height: fit-content;
 }
@@ -173,7 +173,6 @@ section {
   display: flex;
   width: 400px;
   height: 400px;
-  margin: auto 0;
 }
 
 .section__text {
@@ -261,7 +260,6 @@ section {
 .about-container {
   gap: 2rem;
   margin-bottom: 2rem;
-  margin-top: 2rem;
 }
 
 .about-details-container {
@@ -272,10 +270,6 @@ section {
 .about-containers,
 .about-details-container {
   display: flex;
-}
-
-.about-pic {
-  border-radius: 2rem;
 }
 
 .arrow {
@@ -298,19 +292,32 @@ section {
   height: 80%;
 }
 .text-container p {
-  font-size: large;
+  text-align: justify;
+  padding: 0.5rem;
+  font-size: 15px;
+  color: rgb(105, 105, 105);
 }
 
 .section__pic-container {
   width: 400px;
   height: 400px;
-  margin: auto 0;
+  margin: 0;
+}
+.about-pic {
+  border-radius: 2rem;
+  box-shadow: #333;
 }
 
 /* Experience Section */
 
 #experience {
   position: relative;
+}
+
+#experience li {
+  margin-bottom: 8px; /* Add space between list items */
+  display: list-item;
+  list-style: lower-roman;
 }
 
 .experience-details-container {
@@ -321,22 +328,14 @@ section {
 }
 
 .experience-details-container ul {
-  list-style: decimal inside;
   padding-left: 1rem;
-}
-
-.experience-details-container li {
-  margin-bottom: auto;
-  font-size: 1.2rem;
-  color: #333;
 }
 
 .about-containers {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   gap: 2rem;
-  margin-bottom: 2rem;
-  margin-top: 2rem;
+  margin-bottom: 1rem;
 }
 
 .details-containers {
@@ -365,35 +364,30 @@ article {
 
 .experience-sub-title {
   color: black;
-  font-size: 1.75rem;
+  font-size: 1.25rem;
   font-weight: 600;
   margin-bottom: 2rem;
   text-align: center;
 }
 
 .article-container li {
+  list-style: lower-roman;
   display: flex;
   align-items: center;
-  gap: 1rem;
+  gap: 1.5rem;
   padding: 0.5rem;
   font-size: 1.25rem;
-  color: rgb(0, 0, 0);
+  color: rgb(105, 105, 105);
 }
 
 .article-container h2 {
   color: rgb(53, 50, 48);
-}
-.article-container ul {
-  list-style: none;
-  margin: 0;
-  padding-left: 1.2rem;
 }
 
 /* Projects Section */
 
 #projects {
   position: relative;
-  margin-bottom: auto;
 }
 
 .color-contrainer {
@@ -411,6 +405,7 @@ article {
 .project-title {
   margin: 1rem;
   color: black;
+  font-size: 1rem;
 }
 
 .project-btn {
@@ -433,6 +428,8 @@ article {
   justify-content: center;
   flex-direction: column;
   height: 70vh;
+  padding-top: 2vh !important;
+  margin-top: -1rem !important;
 }
 
 .contact-info-upper-container {
@@ -443,7 +440,8 @@ article {
   border-color: rgb(163, 163, 163);
   background: (250, 250, 250);
   margin: 2rem auto;
-  padding: 0.5rem;
+  margin-bottom: 0;
+  margin-top: 0;
 }
 
 .contact-info-container {
@@ -469,7 +467,7 @@ article {
 /* footer */
 footer {
   height: 26vh;
-  margin: 0 1rem;
+  margin: 0;
 }
 
 footer nav {
@@ -478,4 +476,8 @@ footer nav {
 }
 footer p {
   text-align: center;
+}
+footer a {
+  color: rgb(112, 29, 29);
+  text-decoration: dotted;
 }
