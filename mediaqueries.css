@@ -34,15 +34,26 @@
   .section-container {
     height: fit-content;
   }
-
+  #profile {
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
+    gap: 2rem; /* Add space between picture and text */
+    height: fit-content; /* Allow height to adjust to content */
+    margin-bottom: 4rem;
+  }
+  .section__text {
+    text-align: center;
+    width: 100%; /* Full width on smaller screens */
+    max-width: 600px; /* Limit maximum width */
+  }
   section {
     margin: 0 5%;
   }
 
   .section__pic-container {
-    width: 275px;
-    height: 275px;
-    margin: auto;
+    width: 300px; /* Responsive width */
+    height: 300px; /* Responsive height */
+    margin: 0 auto; /* Center the picture */
   }
 
   .about-containers {
