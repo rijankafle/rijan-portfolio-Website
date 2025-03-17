@@ -1,3 +1,4 @@
+/* Large Screens (1400px and below) */
 @media screen and (max-width: 1400px) {
   #profile {
     height: 83vh;
@@ -9,25 +10,21 @@
   }
 }
 
+/* Medium Screens (1200px and below) */
 @media screen and (max-width: 1200px) {
+  /* Navigation Changes */
   #desktop-nav {
     display: none;
   }
+
   #hamburger-nav {
     display: flex;
   }
 
-  #experience .experience-details-container {
-    margin-top: 2rem;
-  }
-
+  /* Layout Changes */
   #profile,
   .section-container {
     display: block;
-  }
-
-  .arrow {
-    display: none;
   }
 
   section,
@@ -39,6 +36,15 @@
     margin: 0 5%;
   }
 
+  /* Specific Element Changes */
+  #experience .experience-details-container {
+    margin-top: 2rem;
+  }
+
+  .arrow {
+    display: none;
+  }
+
   .section__pic-container {
     width: 275px;
     height: 275px;
@@ -48,25 +54,77 @@
   .about-containers {
     margin-top: 0;
   }
+
+  /* Mobile Navigation */
+  .nav-links-container {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background-color: #34495e;
+    max-width: 200px;
+    z-index: 1000;
+  }
+
+  .nav-links-container.open {
+    display: flex;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .nav-links a {
+    padding: 1rem;
+    text-align: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    width: auto;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  .hamburger-menu {
+    display: flex;
+  }
 }
 
+/* Small Screens (600px and below) */
 @media screen and (max-width: 600px) {
+  /* Section Heights */
   #contact,
   footer {
     height: 40vh;
   }
+
   #profile {
     height: 83vh;
     margin-bottom: 0;
   }
+
+  /* Typography Changes */
   article {
     font-size: 1rem;
   }
 
-  footer nav {
-    height: fit-content;
-    margin-bottom: 2rem;
+  .experience-sub-title {
+    font-size: 1.5rem;
   }
+
+  .logo {
+    font-size: 1.5rem;
+  }
+
+  .section__text__p2 {
+    font-size: 1.25rem;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+
+  /* Layout Changes */
   .about-containers,
   .contact-info-uper-container,
   .btn-container {
@@ -82,12 +140,11 @@
     font-size: 1rem;
   }
 
-  .experience-sub-title {
-    font-size: 1.5rem;
+  footer nav {
+    height: fit-content;
+    margin-bottom: 2rem;
   }
-  .logo {
-    font-size: 1.5rem;
-  }
+
   .nav-links {
     flex-direction: column;
     gap: 0.5rem;
@@ -98,14 +155,6 @@
     width: auto;
     height: 46vw;
     justify-content: center;
-  }
-
-  .section__text__p2 {
-    font-size: 1.25rem;
-  }
-
-  .title {
-    font-size: 2rem;
   }
 
   .text-container {

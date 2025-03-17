@@ -3,225 +3,203 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
+    <meta name="description" content="Portfolio website for Rijan Kafle, Software Developer">
+    <title>Rijan Kafle - Software Developer Portfolio</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="mediaqueries.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <nav class="navbar">
-        <div class="logo">Rijan Kafle</div>
-        <div class="hamburger-menu" onclick="toggleMenu()">
-            <div class="hamburger-icon">
-                <span></span>
-                <span></span>
-                <span></span>
+    <header>
+        <nav class="navbar" aria-label="Main navigation">
+            <div class="logo">Rijan Kafle</div>
+            <button class="hamburger-menu" onclick="toggleMenu()" aria-expanded="false" aria-label="Toggle navigation menu">
+                <div class="hamburger-icon">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </button>
+            <div class="nav-links-container">
+                <ul class="nav-links">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
             </div>
-        </div>
-        <div class="nav-links-container">
-            <ul class="nav-links">
-                <li><a href="#about">About</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </div>
-    </nav>
+        </nav>
+    </header>
 
-    <section id="profile">
-        <div class="section__pic-container">
-            <img src="./assets/imageedit_2_4378959692.png" alt="Rijan kafle profile picture" >
-        </div>
-        <div class="section__text">
-            <p class="section__text__p1">Hello, I'm</p>
-            <h1 class="title">Rijan Kafle</h1>
-            <p class="section__text__p2">Software Developer</p>
-
-            <div class="btn-container">
-                <button 
-                class="btn-color-2" 
-                onclick="window.open('./assets/Rijan_SWE.pdf')"
-                >Download Resume</button>
-
-                <button 
-                class="btn-color-1" 
-                onclick="location.href='./#contact'"
-                >Contact Info</button>
-            </div>
-            <div id="socials-container">
-                <img src="./assets/linkedin.png" 
-                alt="My linkedin profile" 
-                class="icon" 
-                onclick="location.href='https://www.linkedin.com/in/rijan-kafle/'"/>
-                <img src="./assets/github.png" 
-                alt="My GitHub profile" 
-                class="icon" 
-                onclick="location.href='https://github.com/rijankafle'"/>
-            </div>
-        </div>
-    </section>
-
-    <section id="about">
-        <p class="section__text__p1">Get to know more</p>
-        <h1 class="title">About Me</h1>
-        
-        <div class="section-container">
+    <main>
+        <section id="profile" aria-labelledby="profile-heading">
             <div class="section__pic-container">
-                <img src="assets/Untitled design (1).png" 
-                    alt="Profile picture" 
-                    class="about-pic"/>
+                <img src="./assets/imageedit_2_4378959692.png" alt="Rijan Kafle profile picture">
             </div>
-    
-            <div class="about-details-container">
-                <div class="about-containers">
-                    <div class="detailes-container">
-                        <img src="./assets/education.png" 
-                            alt="Education icon" 
-                            class="icon"/>
-                        <h3>Education</h3>
-                        <p>B.A. Computer Science <br> </p>
-                    </div>
-                </div>
-    
-                <div class="text-container">
-                    <p class="about-text">
-                        👋🏽 I'm Rijan Kafle, a recent Computer Science graduate from Augustana College actively seeking new challenges in software engineering. 
-                    </p>
-                    <p class="about-text">
-                        💻 My passion lies in <strong>Web Development</strong>, <strong>App Development</strong> (Android & iOS), and <strong>Machine Learning</strong>. When not coding, I stay energized through fitness activities like weight training and running.
-                    </p>
-                    <p class="about-text">
-                        🚀 I thrive on solving complex problems that push my limits, continuously developing my technical skills and problem-solving abilities through challenging projects.
-                    </p>
-                    <p class="about-text">
-                        🤝 I excel in team environments, believing collaboration and diverse perspectives are key to building impactful solutions.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
+            <div class="section__text">
+                <p class="section__text__p1">Hello, I'm</p>
+                <h1 id="profile-heading" class="title">Rijan Kafle</h1>
+                <p class="section__text__p2">Software Developer</p>
 
-    <section id="experience">
-        <p class="section__text__p1"></p>
-        <h1 class="title">Experience</h1>
-        <div class="experience-details-container">
-            <div class="about-containers">
-                <div class="details-containers" aria-label="Cloud Systems Intern at Group O">
-                    <div class="article-container">
-                        <h2 class="experience-sub-title">Cloud Systems Intern</h2>
-                        <p class="experience-duration"><strong>May 2024 - Aug 2024 | Group O</strong></p>
-                        <div style="text-align: center;">
-                            <button class="toggle-details" onclick="toggleDetails(this)">Show Details</button>
-                        </div>
-                        <ul class="experience-list" style="display: none;">
-                            <li><strong>Optimized security & scalability:</strong> Configured 3 rewards program websites with deployment slots, custom domains, SSL, and Application Insights.</li>
-                            <li><strong>Improved system performance:</strong> Managed backend pools for 6 gateways, reducing downtime by 20% and improving response times by 15%.</li>
-                            <li><strong>Automated operations:</strong> Authored 5+ PowerShell scripts, cutting manual effort by 30% and improving audit accuracy and asset management.</li>
-                            <li><strong>Cost reduction:</strong> Led website migration from ASE to standalone web apps, reducing operational costs by 30%.</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="about-containers">
-                <div class="details-containers" aria-label="Data Analyst at DBE Global">
-                    <div class="article-container">
-                        <h2 class="experience-sub-title">Data Analyst</h2>
-                        <p class="experience-duration"><strong>March 2024 - May 2024 | DBE Global, Dallas, TX, USA</strong></p>
-                        <div style="text-align: center;">
-                            <button class="toggle-details" onclick="toggleDetails(this)">Show Details</button>
-                        </div>
-                        <ul class="experience-list" style="display: none;">
-                            <li><strong>Leveraged Python (Pandas, NumPy) and SQL:</strong> Analyzed event attendance, customer behavior, and engagement metrics.</li>
-                            <li><strong>Conducted statistical analysis:</strong> Analyzed 1,000+ clothing sales records using R, optimizing inventory by 20% and increasing revenue from top-selling items by 10%.</li>
-                            <li><strong>Evaluated social media performance:</strong> Used Google Analytics and Power BI to drive data-informed content strategy adjustments that boosted audience engagement by 25%.</li>
-                            <li><strong>Deployed interactive Tableau dashboards:</strong> Created 5+ dashboards to visualize revenue streams and customer demographics, enabling data-driven decisions that reduced operational costs by 10%.</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="about-containers">
-                <div class="details-containers" aria-label="Front End Developer at Edge Center">
-                    <div class="article-container">
-                        <h2 class="experience-sub-title">Front End Developer</h2>
-                        <p class="experience-duration"><strong>Jan 2024 - May 2024 | Edge Center</strong></p>
-                        <div style="text-align: center;">
-                            <button class="toggle-details" onclick="toggleDetails(this)">Show Details</button>
-                        </div>
-                        <ul class="experience-list" style="display: none;">
-                            <li><strong>Contributed to the Augustana Web Guild:</strong> Developed websites for local nonprofits and small businesses, improving their online presence and engagement.</li>
-                            <li><strong>Enhanced user experience:</strong> Developed and launched a fully responsive website achieving 100% cross-browser compatibility and a 40% faster page load time.</li>
-                            <li><strong>Boosted engagement:</strong> Built interactive UIs with React.js, including real-time event calendars, validated contact forms, and interactive donation portals, increasing user engagement by 60%.</li>
-                            <li><strong>Improved collaboration:</strong> Implemented Git for version control, streamlining teamwork among a team of 5 developers and reducing code conflicts by 80%.</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <section id="projects">
-        <p class="section__text__p1">Browse My Recent Projects</p>
-        <h1 class="title">Projects</h1>
-        <div class="projects-container">
-            <div class="project-card" aria-label="Market Sim Project">
-                <img src="./assets/MARKETSIM1024_1024.png" alt="Market Sim project screenshot" class="project-img">
-                <h2 class="project-title">Market Sim</h2>
-                <p class="project-description">A simulation project that allows users to engage in market trading.</p>
                 <div class="btn-container">
-                    <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/AugustanaCSC490Spring2024/Quetzal/tree/main'">GitHub</button>
+                    <a href="./assets/Rijan_SWE.pdf" class="btn-color-2" download>Download Resume</a>
+                    <a href="#contact" class="btn-color-1">Contact Info</a>
+                </div>
+                <div id="socials-container">
+                    <a href="https://www.linkedin.com/in/rijan-kafle/" target="_blank" rel="noopener noreferrer">
+                        <img src="./assets/linkedin.png" alt="LinkedIn Profile" class="icon">
+                    </a>
+                    <a href="https://github.com/rijankafle" target="_blank" rel="noopener noreferrer">
+                        <img src="./assets/github.png" alt="GitHub Profile" class="icon">
+                    </a>
                 </div>
             </div>
-            <div class="project-card" aria-label="Demeter Project">
-                <img src="./assets/project-2.webp" alt="Demeter project screenshot" class="project-img">
-                <h2 class="project-title">Demeter</h2>
-                <p class="project-description">An innovative project focused on sustainable agriculture.</p>
-                <div class="btn-container">
-                    <button class="btn btn-color-2 project-btn" onclick="location.href='https://www.youtube.com/watch?v=oKJZ6NMlvas'">Demo</button>
-                </div>
-            </div>
-            <div class="project-card" aria-label="Real Estate Analysis Project">
-                <img src="./assets/project-3.webp" alt="Real Estate Analysis project screenshot" class="project-img">
-                <h2 class="project-title">Real Estate Analysis</h2>
-                <p class="project-description">A comprehensive analysis tool for real estate data.</p>
-                <div class="btn-container">
-                    <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/rijankafle/Texas-Real-Estate-Analysis'">GitHub</button>
-                </div>
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="contact">
-        <p class="section__text__p1">Get in Touch</p>
-        <h1 class="title">Contact Me</h1>
-        <div class="contact-info-upper-container">
-            <div class="contact-info-container">
-                <img src="./assets/email.png" 
-                alt="Email Icon"
-                class="icon contact-icon email-icon"/>
-                <p><a href="mailto:rijankafle20@augustana.edu">rijankafle20@augustana.edu</a>
-                </p>
-            </div>
-        
-           
-                <div class="contact-info-container">
-                    <img src="./assets/linkedin.png" 
-                    alt="Email Icon"
-                    class="icon contact-icon"/>
-                    <p><a href="https://www.linkedin.com/in/rijan-kafle/">LinkedIn</a>
-                    </p>
-                </div>
+        <section id="about" aria-labelledby="about-heading">
+            <p class="section__text__p1">Get to know more</p>
+            <h2 id="about-heading" class="title">About Me</h2>
             
-        </div>
-    </section>
+            <div class="section-container">
+                <div class="section__pic-container">
+                    <img src="assets/Untitled design (1).png" alt="Profile picture" class="about-pic">
+                </div>
+        
+                <div class="about-details-container">
+                    <div class="about-containers">
+                        <div class="detailes-container">
+                            <img src="./assets/education.png" alt="Education icon" class="icon">
+                            <h3>Education</h3>
+                            <p>B.A. Computer Science</p>
+                        </div>
+                    </div>
+        
+                    <div class="text-container">
+                        <p class="about-text">
+                            👋🏽 I'm Rijan Kafle, a recent Computer Science graduate from Augustana College actively seeking new challenges in software engineering. 
+                        </p>
+                        <p class="about-text">
+                            💻 My passion lies in <strong>Web Development</strong>, <strong>App Development</strong> (Android & iOS), and <strong>Machine Learning</strong>. When not coding, I stay energized through fitness activities like weight training and running.
+                        </p>
+                        <p class="about-text">
+                            🚀 I thrive on solving complex problems that push my limits, continuously developing my technical skills and problem-solving abilities through challenging projects.
+                        </p>
+                        <p class="about-text">
+                            🤝 I excel in team environments, believing collaboration and diverse perspectives are key to building impactful solutions.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="experience" aria-labelledby="experience-heading">
+            <h2 id="experience-heading" class="title">Experience</h2>
+            <div class="experience-details-container">
+                <div class="about-containers">
+                    <div class="details-containers">
+                        <div class="article-container">
+                            <h3 class="experience-sub-title">Cloud Systems Intern</h3>
+                            <p class="experience-duration"><strong>May 2024 - Aug 2024 | Group O</strong></p>
+                            <div style="text-align: center;">
+                                <button class="toggle-details" onclick="toggleDetails(this)" aria-expanded="false" aria-controls="cloud-systems-details">Show Details</button>
+                            </div>
+                            <ul id="cloud-systems-details" class="experience-list" style="display: none;">
+                                <li><strong>Optimized security & scalability:</strong> Configured 3 rewards program websites with deployment slots, custom domains, SSL, and Application Insights.</li>
+                                <li><strong>Improved system performance:</strong> Managed backend pools for 6 gateways, reducing downtime by 20% and improving response times by 15%.</li>
+                                <li><strong>Automated operations:</strong> Authored 5+ PowerShell scripts, cutting manual effort by 30% and improving audit accuracy and asset management.</li>
+                                <li><strong>Cost reduction:</strong> Led website migration from ASE to standalone web apps, reducing operational costs by 30%.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-containers">
+                    <div class="details-containers">
+                        <div class="article-container">
+                            <h3 class="experience-sub-title">Data Analyst</h3>
+                            <p class="experience-duration"><strong>March 2024 - May 2024 | DBE Global, Dallas, TX, USA</strong></p>
+                            <div style="text-align: center;">
+                                <button class="toggle-details" onclick="toggleDetails(this)" aria-expanded="false" aria-controls="data-analyst-details">Show Details</button>
+                            </div>
+                            <ul id="data-analyst-details" class="experience-list" style="display: none;">
+                                <li><strong>Leveraged Python (Pandas, NumPy) and SQL:</strong> Analyzed event attendance, customer behavior, and engagement metrics.</li>
+                                <li><strong>Conducted statistical analysis:</strong> Analyzed 1,000+ clothing sales records using R, optimizing inventory by 20% and increasing revenue from top-selling items by 10%.</li>
+                                <li><strong>Evaluated social media performance:</strong> Used Google Analytics and Power BI to drive data-informed content strategy adjustments that boosted audience engagement by 25%.</li>
+                                <li><strong>Deployed interactive Tableau dashboards:</strong> Created 5+ dashboards to visualize revenue streams and customer demographics, enabling data-driven decisions that reduced operational costs by 10%.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-containers">
+                    <div class="details-containers">
+                        <div class="article-container">
+                            <h3 class="experience-sub-title">Front End Developer</h3>
+                            <p class="experience-duration"><strong>Jan 2024 - May 2024 | Edge Center</strong></p>
+                            <div style="text-align: center;">
+                                <button class="toggle-details" onclick="toggleDetails(this)" aria-expanded="false" aria-controls="frontend-dev-details">Show Details</button>
+                            </div>
+                            <ul id="frontend-dev-details" class="experience-list" style="display: none;">
+                                <li><strong>Contributed to the Augustana Web Guild:</strong> Developed websites for local nonprofits and small businesses, improving their online presence and engagement.</li>
+                                <li><strong>Enhanced user experience:</strong> Developed and launched a fully responsive website achieving 100% cross-browser compatibility and a 40% faster page load time.</li>
+                                <li><strong>Boosted engagement:</strong> Built interactive UIs with React.js, including real-time event calendars, validated contact forms, and interactive donation portals, increasing user engagement by 60%.</li>
+                                <li><strong>Improved collaboration:</strong> Implemented Git for version control, streamlining teamwork among a team of 5 developers and reducing code conflicts by 80%.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="projects" aria-labelledby="projects-heading">
+            <p class="section__text__p1">Browse My Recent Projects</p>
+            <h2 id="projects-heading" class="title">Projects</h2>
+            <div class="projects-container">
+                <article class="project-card">
+                    <img src="./assets/MARKETSIM1024_1024.png" alt="Market Sim project screenshot" class="project-img">
+                    <h3 class="project-title">Market Sim</h3>
+                    <p class="project-description">A simulation project that allows users to engage in market trading.</p>
+                    <div class="btn-container">
+                        <a href="https://github.com/AugustanaCSC490Spring2024/Quetzal/tree/main" target="_blank" rel="noopener noreferrer" class="btn btn-color-2 project-btn">GitHub</a>
+                    </div>
+                </article>
+                <article class="project-card">
+                    <img src="./assets/project-2.webp" alt="Demeter project screenshot" class="project-img">
+                    <h3 class="project-title">Demeter</h3>
+                    <p class="project-description">An innovative project focused on sustainable agriculture.</p>
+                    <div class="btn-container">
+                        <a href="https://www.youtube.com/watch?v=oKJZ6NMlvas" target="_blank" rel="noopener noreferrer" class="btn btn-color-2 project-btn">Demo</a>
+                    </div>
+                </article>
+                <article class="project-card">
+                    <img src="./assets/project-3.webp" alt="Real Estate Analysis project screenshot" class="project-img">
+                    <h3 class="project-title">Real Estate Analysis</h3>
+                    <p class="project-description">A comprehensive analysis tool for real estate data.</p>
+                    <div class="btn-container">
+                        <a href="https://github.com/rijankafle/Texas-Real-Estate-Analysis" target="_blank" rel="noopener noreferrer" class="btn btn-color-2 project-btn">GitHub</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section id="contact" aria-labelledby="contact-heading">
+            <p class="section__text__p1">Get in Touch</p>
+            <h2 id="contact-heading" class="title">Contact Me</h2>
+            <div class="contact-info-upper-container">
+                <div class="contact-info-container">
+                    <img src="./assets/email.png" alt="Email Icon" class="icon contact-icon email-icon">
+                    <p><a href="mailto:rijankafle20@augustana.edu">rijankafle20@augustana.edu</a></p>
+                </div>
+                <div class="contact-info-container">
+                    <img src="./assets/linkedin.png" alt="LinkedIn Icon" class="icon contact-icon">
+                    <p><a href="https://www.linkedin.com/in/rijan-kafle/" target="_blank" rel="noopener noreferrer">LinkedIn</a></p>
+                </div>
+            </div>
+        </section>
+    </main>
     
     <footer>
         <p>Copyright &#169; 2025 Rijan Kafle. All Rights Reserved</p>
     </footer>
+    
     <script src="script.js"></script>
-    <script>
-    function toggleMenu() {
-        const navLinksContainer = document.querySelector('.nav-links-container');
-        navLinksContainer.classList.toggle('open'); // Toggle the 'open' class
-    }
-    </script>
 </body>
 </html>
