@@ -8,35 +8,22 @@
     <link rel="stylesheet" href="mediaqueries.css">
 </head>
 <body>
-
-    <nav id="desktop-nav">
+    <nav class="navbar">
         <div class="logo">Rijan Kafle</div>
-        <div>
-            <ul class="nav-links">
-                <li><a href="#about">About</a></li>  
-                <li><a href="#experience">Experience</a></li>  
-                <li><a href="#projects">Projects</a></li>  
-                <li><a href="#contact">Contacts</a></li>  
-            </ul>
+        <div class="hamburger-menu" onclick="toggleMenu()">
+            <div class="hamburger-icon">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </div>
-
-    </nav>
-
-    <nav id="hamburger-nav">
-        <div class="logo">Rijan Kafle</div>
-        <div class="hamburger-menu">
-            <div class="hamburger-icon" onclick="toggleMenu()">
-                <span></span>
-                <span></span>
-                <span></span>
-
-            </div>
-            <div class="menu-links" >
-                    <li><a href="#about" onclick="toggleMenu()">About</a></li>  
-                    <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>  
-                    <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>  
-                    <li><a href="#contacts" onclick="toggleMenu()">Contacts</a></li>
-            </div>
+        <div class="nav-links-container">
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
         </div>
     </nav>
 
@@ -45,11 +32,11 @@
             <img src="./assets/imageedit_2_4378959692.png" alt="Rijan kafle profile picture" >
         </div>
         <div class="section__text">
-            <p class="section__text__p1">Hello,I'm</p>
+            <p class="section__text__p1">Hello, I'm</p>
             <h1 class="title">Rijan Kafle</h1>
             <p class="section__text__p2">Software Developer</p>
 
-            <div class="btn_container">
+            <div class="btn-container">
                 <button 
                 class="btn-color-2" 
                 onclick="window.open('./assets/Rijan_SWE.pdf')"
@@ -70,10 +57,7 @@
                 class="icon" 
                 onclick="location.href='https://github.com/rijankafle'"/>
             </div>
-
         </div>
-
-
     </section>
 
     <section id="about">
@@ -81,16 +65,13 @@
         <h1 class="title">About Me</h1>
         
         <div class="section-container">
-            <!-- Profile Picture Container -->
             <div class="section__pic-container">
                 <img src="assets/Untitled design (1).png" 
                     alt="Profile picture" 
                     class="about-pic"/>
             </div>
     
-            <!-- About Details Container -->
             <div class="about-details-container">
-                <!-- Education Container -->
                 <div class="about-containers">
                     <div class="detailes-container">
                         <img src="./assets/education.png" 
@@ -101,7 +82,6 @@
                     </div>
                 </div>
     
-                <!-- About Text Container -->
                 <div class="text-container">
                     <p class="about-text">
                         👋🏽 I'm Rijan Kafle, a recent Computer Science graduate from Augustana College actively seeking new challenges in software engineering. 
@@ -118,11 +98,6 @@
                 </div>
             </div>
         </div>
-    
-        <img src="./assets/arrow.png" 
-            alt="Arrow Icon" 
-            class="icon arrow" 
-            onclick="location.href='./#experience'"/>
     </section>
 
     <section id="experience">
@@ -130,95 +105,88 @@
         <h1 class="title">Experience</h1>
         <div class="experience-details-container">
             <div class="about-containers">
-                <div class="details-containers">
+                <div class="details-containers" aria-label="Cloud Systems Intern at Group O">
                     <div class="article-container">
-                        <article>
-                            <h2 class="experience-sub-title">Cloud Systems Intern</h2>
-                            <p class="experience-duration"> <strong>May 2024 - Aug 2024 | Group O</strong></p>
-                            <ul class="experience-list">
-                                <li><strong>Optimized security & scalability:</strong> Configured 3 rewards program websites with deployment slots, custom domains, SSL, and Application Insights.</li>
-                                <li><strong>Improved system performance:</strong> Managed backend pools for 6 gateways, reducing downtime by 20% and improving response times by 15%.</li>
-                                <li><strong>Automated operations:</strong> Authored 5+ PowerShell scripts, cutting manual effort by 30% and improving audit accuracy and asset management.</li>
-                                <li><strong>Cost reduction:</strong> Led website migration from ASE to standalone web apps, reducing operational costs by 30%.</li>
-                            </ul>
-                        </article>
+                        <h2 class="experience-sub-title">Cloud Systems Intern</h2>
+                        <p class="experience-duration"><strong>May 2024 - Aug 2024 | Group O</strong></p>
+                        <div style="text-align: center;">
+                            <button class="toggle-details" onclick="toggleDetails(this)">Show Details</button>
+                        </div>
+                        <ul class="experience-list" style="display: none;">
+                            <li><strong>Optimized security & scalability:</strong> Configured 3 rewards program websites with deployment slots, custom domains, SSL, and Application Insights.</li>
+                            <li><strong>Improved system performance:</strong> Managed backend pools for 6 gateways, reducing downtime by 20% and improving response times by 15%.</li>
+                            <li><strong>Automated operations:</strong> Authored 5+ PowerShell scripts, cutting manual effort by 30% and improving audit accuracy and asset management.</li>
+                            <li><strong>Cost reduction:</strong> Led website migration from ASE to standalone web apps, reducing operational costs by 30%.</li>
+                        </ul>
                     </div>
                 </div>
-                <div class="details-containers">
+            </div>
+            <div class="about-containers">
+                <div class="details-containers" aria-label="Data Analyst at DBE Global">
                     <div class="article-container">
-                        <article>
-                            <h2 class="experience-sub-title">Front End Developer</h2>
-                            <p class="experience-duration"> <strong>Jan 2024 - May 2024 | Edge Center</strong></p>
-                            <ul class="experience-list">
-                                <li><strong>Contributed to the Augustana Web Guild:</strong> Developed websites for local nonprofits and small businesses, improving their online presence and engagement.
-                                </li>
-                                <li><strong>Enhanced user experience:</strong> Developed and launched a fully responsive website achieving 100% cross-browser compatibility and a 40% faster page load time.</li>
-                                <li><strong>Boosted engagement:</strong> Built interactive UIs with React.js, including real-time event calendars, validated contact forms, and interactive donation portals, increasing user engagement by 60%.</li>
-                                <li><strong>Improved collaboration:</strong> Implemented Git for version control, streamlining teamwork among a team of 5 developers and reducing code conflicts by 80%.</li>
-                            </ul>
-                        </article>
+                        <h2 class="experience-sub-title">Data Analyst</h2>
+                        <p class="experience-duration"><strong>March 2024 - May 2024 | DBE Global, Dallas, TX, USA</strong></p>
+                        <div style="text-align: center;">
+                            <button class="toggle-details" onclick="toggleDetails(this)">Show Details</button>
+                        </div>
+                        <ul class="experience-list" style="display: none;">
+                            <li><strong>Leveraged Python (Pandas, NumPy) and SQL:</strong> Analyzed event attendance, customer behavior, and engagement metrics.</li>
+                            <li><strong>Conducted statistical analysis:</strong> Analyzed 1,000+ clothing sales records using R, optimizing inventory by 20% and increasing revenue from top-selling items by 10%.</li>
+                            <li><strong>Evaluated social media performance:</strong> Used Google Analytics and Power BI to drive data-informed content strategy adjustments that boosted audience engagement by 25%.</li>
+                            <li><strong>Deployed interactive Tableau dashboards:</strong> Created 5+ dashboards to visualize revenue streams and customer demographics, enabling data-driven decisions that reduced operational costs by 10%.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="about-containers">
+                <div class="details-containers" aria-label="Front End Developer at Edge Center">
+                    <div class="article-container">
+                        <h2 class="experience-sub-title">Front End Developer</h2>
+                        <p class="experience-duration"><strong>Jan 2024 - May 2024 | Edge Center</strong></p>
+                        <div style="text-align: center;">
+                            <button class="toggle-details" onclick="toggleDetails(this)">Show Details</button>
+                        </div>
+                        <ul class="experience-list" style="display: none;">
+                            <li><strong>Contributed to the Augustana Web Guild:</strong> Developed websites for local nonprofits and small businesses, improving their online presence and engagement.</li>
+                            <li><strong>Enhanced user experience:</strong> Developed and launched a fully responsive website achieving 100% cross-browser compatibility and a 40% faster page load time.</li>
+                            <li><strong>Boosted engagement:</strong> Built interactive UIs with React.js, including real-time event calendars, validated contact forms, and interactive donation portals, increasing user engagement by 60%.</li>
+                            <li><strong>Improved collaboration:</strong> Implemented Git for version control, streamlining teamwork among a team of 5 developers and reducing code conflicts by 80%.</li>
+                        </ul>
                     </div>
                 </div>
             </div>
         </div>
-        <img src="./assets/arrow.png" alt="Arrow Icon" class="icon arrow" onclick="location.href='./#projects'"/>
     </section>
     
-    
     <section id="projects">
-        <p class="section__text__p1"> Browse My Recent</p>
+        <p class="section__text__p1">Browse My Recent Projects</p>
         <h1 class="title">Projects</h1>
-        <div class="experience-details-container">
-            <div class="projects-contianers">
-
-          
-            <div class="details-container color-container  details-containers">
-                <div class="article-container">
-                    <img src="./assets/MARKETSIM1024_1024.png"
-                     alt="project-1"
-                     class="project-img">
-
-                </div>
-                <h2 class="experience-sub-title project-title"> Market Sim</h2>
-
+        <div class="projects-container">
+            <div class="project-card" aria-label="Market Sim Project">
+                <img src="./assets/MARKETSIM1024_1024.png" alt="Market Sim project screenshot" class="project-img">
+                <h2 class="project-title">Market Sim</h2>
+                <p class="project-description">A simulation project that allows users to engage in market trading.</p>
                 <div class="btn-container">
                     <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/AugustanaCSC490Spring2024/Quetzal/tree/main'">GitHub</button>
-                    
                 </div>
             </div>
-            <div class="details-container color-container  details-containers">
-                <div class="article-container">
-                    <img src="./assets/project-2.webp"
-                     alt="project-1"
-                     class="project-img">
-
-                </div>
-                <h2 class="experience-sub-title project-title">Demeter</h2>
-
+            <div class="project-card" aria-label="Demeter Project">
+                <img src="./assets/project-2.webp" alt="Demeter project screenshot" class="project-img">
+                <h2 class="project-title">Demeter</h2>
+                <p class="project-description">An innovative project focused on sustainable agriculture.</p>
                 <div class="btn-container">
                     <button class="btn btn-color-2 project-btn" onclick="location.href='https://www.youtube.com/watch?v=oKJZ6NMlvas'">Demo</button>
                 </div>
             </div>
-            <div class="details-container color-container  details-containers">
-                <div class="article-container">
-                    <img src="./assets/project-3.webp"
-                     alt="project-1"
-                     class="project-img">
-
-                </div>
-                <h2 class="experience-sub-title project-title">Real Estate Analysis</h2>
-
+            <div class="project-card" aria-label="Real Estate Analysis Project">
+                <img src="./assets/project-3.webp" alt="Real Estate Analysis project screenshot" class="project-img">
+                <h2 class="project-title">Real Estate Analysis</h2>
+                <p class="project-description">A comprehensive analysis tool for real estate data.</p>
                 <div class="btn-container">
                     <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/rijankafle/Texas-Real-Estate-Analysis'">GitHub</button>
-
                 </div>
             </div>
         </div>
-        </div>
-        <img src="./assets/arrow.png" 
-        alt="Arrow Icon" 
-        class="icon arrow" 
-        onclick="location.href='./#contact'"/>
     </section>
 
     <section id="contact">
@@ -243,23 +211,17 @@
                 </div>
             
         </div>
-
-
     </section>
+    
     <footer>
-        <nav>
-        <div class="nav-links-container">
-            <ul class="nav-links">
-                <li><a href="#about">About</a></li>  
-                <li><a href="#experience">Experience</a></li>  
-                <li><a href="#projects">Projects</a></li>  
-                <li><a href="#contacts">Contacts</a></li>  
-            </ul>
-        </div>
-        </nav>
         <p>Copyright &#169; 2025 Rijan Kafle. All Rights Reserved</p>
     </footer>
     <script src="script.js"></script>
-    
+    <script>
+    function toggleMenu() {
+        const navLinksContainer = document.querySelector('.nav-links-container');
+        navLinksContainer.classList.toggle('open'); // Toggle the 'open' class
+    }
+    </script>
 </body>
 </html>
